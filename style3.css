@@ -1,0 +1,105 @@
+/* ===== CONFETTI ===== */
+  .confetti{
+  position:fixed;
+  top:-10px;
+  width:8px;
+  height:12px;
+  animation:fall linear infinite;
+  opacity:.9;
+}
+
+.confetti.small{
+  width:6px;
+  height:8px;
+  opacity:.7;
+}
+
+.confetti.big{
+  width:10px;
+  height:16px;
+}
+
+@keyframes fall{
+  to{
+    transform:translateY(110vh) rotate(720deg);
+  }
+}
+
+body{
+  margin:0;
+  min-height:100vh;
+  background:#0f0f0f;
+  font-family:Arial, sans-serif;
+  color:white;
+  display:flex;
+  justify-content:center;
+  padding:60px 20px;
+}
+
+.page3{
+  max-width:700px;
+  width:100%;
+}
+
+/* Judul */
+.title{
+  text-align:center;
+  font-size:42px;
+  margin-bottom:40px;
+  position:relative;
+}
+
+.title::after{
+  content:"";
+  display:block;
+  width:120px;
+  height:3px;
+  background:linear-gradient(90deg,#ff9ff3,#feca57);
+  margin:14px auto 0;
+  border-radius:10px;
+}
+
+/* Box isi hati */
+.heart-box{
+  background:rgba(255,255,255,.05);
+  border-radius:24px;
+  padding:40px;
+  box-shadow:0 20px 40px rgba(0,0,0,.4);
+}
+
+/* Paragraf */
+.heart-box p{
+  font-size:18px;
+  line-height:1.9;
+  margin-bottom:26px;
+  opacity:0;
+  animation:fadeUp .8s ease forwards;
+}
+
+/* animasi bertahap */
+.heart-box p:nth-child(1){ animation-delay:.3s; }
+.heart-box p:nth-child(2){ animation-delay:.8s; }
+.heart-box p:nth-child(3){ animation-delay:1.3s; }
+.heart-box p:nth-child(4){ animation-delay:1.8s; }
+.heart-box p:nth-child(5){ animation-delay:2.3s; }
+
+.opening{
+  font-style:italic;
+  opacity:.9;
+}
+
+.closing{
+  text-align:center;
+  font-weight:600;
+}
+
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(10px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}

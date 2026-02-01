@@ -1,0 +1,219 @@
+
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#0f0f0f;
+  font-family:Arial, sans-serif;
+  color:white;
+}
+
+.page2{
+  text-align:center;
+  max-width:600px;
+  padding:20px;
+}
+
+/* judul */
+.title{
+  font-size:48px;
+  margin-bottom:30px;
+  position:relative;
+}
+
+.title::after{
+  content:"";
+  display:block;
+  width:100px;
+  height:3px;
+  background:linear-gradient(90deg,#ff9ff3,#feca57);
+  margin:12px auto 0;
+  border-radius:10px;
+}
+
+/* box pesan */
+.message-box{
+  background:rgba(255,255,255,.05);
+  border-radius:20px;
+  padding:30px;
+  box-shadow:0 10px 30px rgba(0,0,0,.4);
+}
+
+/* animasi teks */
+.message-box p{
+  font-size:18px;
+  line-height:1.7;
+  opacity:0;
+  animation:fadeIn 1s ease forwards;
+}
+
+/* delay biar muncul satu-satu */
+.message-box p:nth-child(1){ animation-delay:.3s; }
+.message-box p:nth-child(2){ animation-delay:.9s; }
+.message-box p:nth-child(3){ animation-delay:1.5s; }
+.message-box p:nth-child(4){ animation-delay:2.1s; }
+.message-box p:nth-child(5){ animation-delay:2.7s; }
+
+@keyframes fadeIn{
+  to{
+    opacity:1;
+  }
+}
+
+  /* ===== CONFETTI ===== */
+  .confetti{
+  position:fixed;
+  top:-10px;
+  width:8px;
+  height:12px;
+  animation:fall linear infinite;
+  opacity:.9;
+}
+
+.confetti.small{
+  width:6px;
+  height:8px;
+  opacity:.7;
+}
+
+.confetti.big{
+  width:10px;
+  height:16px;
+}
+
+@keyframes fall{
+  to{
+    transform:translateY(110vh) rotate(720deg);
+  }
+}
+
+  /* ===== TITLE ===== */
+  .title-wrap{
+    position:relative;
+    display:flex;
+    align-items:center;
+    gap:14px;
+    z-index:2;
+  }
+
+  h1{
+    font-size:48px;
+    white-space:nowrap;
+  }
+
+  /* ===== CAKE ===== */
+.cake{
+    filter: drop-shadow(0 0 10px rgba(255,182,193,.7));
+  width:68px;
+  height:58px;
+  position:relative;
+  animation:bounce 1.5s infinite ease-in-out;
+  
+}
+
+.layer{
+  position:absolute;
+  width:100%;
+  height:16px;
+  border-radius:10px;
+  background:#ffb6c1;
+}
+
+.layer:nth-child(1){ bottom:0; }
+.layer:nth-child(2){
+  bottom:16px;
+  background:#ffc0cb;
+}
+.layer:nth-child(3){
+  bottom:32px;
+  background:#ffd1dc;
+}
+
+.candle{
+  position:absolute;
+  top:-20px;
+  left:50%;
+  transform:translateX(-50%);
+  width:8px;
+  height:20px;
+  background:white;
+  border-radius:4px;
+}
+
+.flame{
+  position:absolute;
+  top:-14px;
+  left:50%;
+  transform:translateX(-50%);
+  width:14px;
+  height:14px;
+  background:orange;
+  border-radius:50%;
+  animation:flicker .25s infinite alternate;
+body {
+    
+    background-color:black;  
+    } 
+
+.NEXT
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:20px;
+}
+
+.NEXT{
+  padding:12px 28px;
+  font-size:16px;
+  border:none;
+  border-radius:30px;
+  cursor:pointer;
+  background:linear-gradient(135deg,#ff9ff3,#feca57);
+  color:#111;
+  font-weight:bold;
+  transition:.25s;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+button:hover{
+  transform:translateY(-3px) scale(1.05);
+  box-shadow:0 10px 20px rgba(255,158,243,.4);
+}
+
+button:active{
+  transform:scale(.95);
+}
+
+.PREVORIUS{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:20px;
+}
+
+.PREVORIUS{
+  padding:12px 28px;
+  font-size:16px;
+  border:none;
+  border-radius:30px;
+  cursor:pointer;
+  background:linear-gradient(135deg,#ff9ff3,#feca57);
+  color:#111;
+  font-weight:bold;
+  transition:.25s;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+}
+
+button:hover{
+  transform:translateY(-3px) scale(1.05);
+  box-shadow:0 10px 20px rgba(255,158,243,.4);
+}
+
+button:active{
+  transform:scale(.95);
