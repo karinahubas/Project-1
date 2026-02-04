@@ -35,6 +35,22 @@ p{
   padding:20px;
 }
 
+.title-wrap{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+button, .btn{
+  padding:14px 30px;
+  border-radius:30px;
+  font-size:clamp(14px, 3vw, 16px);
+  max-width:280px;
+  width:100%;
+}
+
 /* judul */
 .title{
   font-size:48px;
