@@ -20,16 +20,6 @@ body{
 }
 
 
-body{
-  margin:0;
-  height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  background:#0f0f0f;
-  font-family:Arial, sans-serif;
-  color:white;
-}
 
 .page2{
   text-align:center;
