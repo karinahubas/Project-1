@@ -18,58 +18,28 @@ body{
   max-width:900px;
   padding:clamp(16px, 4vw, 40px);
 }
-  
 
-
-  /* ===== CONFETTI ===== */
-  .confetti{
-  position:fixed;
-  top:-10px;
-  width:8px;
-  height:12px;
-  animation:fall linear infinite;
-  opacity:.9;
+/* ===== TITLE ===== */
+.title-wrap{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  justify-content:center;
+  flex-wrap:wrap; /* penting buat HP */
 }
 
-.confetti.small{
-  width:6px;
-  height:8px;
-  opacity:.7;
+h1{
+  font-size:clamp(28px, 6vw, 48px);
+  text-align:center;
 }
 
-.confetti.big{
-  width:10px;
-  height:16px;
-}
-
-@keyframes fall{
-  to{
-    transform:translateY(110vh) rotate(720deg);
-  }
-}
-
-  /* ===== TITLE ===== */
-  .title-wrap{
-    position:relative;
-    display:flex;
-    align-items:center;
-    gap:14px;
-    z-index:2;
-  }
-
-  h1{
-    font-size:48px;
-    white-space:nowrap;
-  }
-
-  /* ===== CAKE ===== */
+/* ===== CAKE ===== */
 .cake{
-    filter: drop-shadow(0 0 10px rgba(255,182,193,.7));
-  width:68px;
-  height:58px;
+  width:clamp(50px, 12vw, 68px);
+  height:clamp(42px, 10vw, 58px);
   position:relative;
+  filter: drop-shadow(0 0 10px rgba(255,182,193,.7));
   animation:bounce 1.5s infinite ease-in-out;
-  
 }
 
 .layer{
@@ -81,14 +51,8 @@ body{
 }
 
 .layer:nth-child(1){ bottom:0; }
-.layer:nth-child(2){
-  bottom:16px;
-  background:#ffc0cb;
-}
-.layer:nth-child(3){
-  bottom:32px;
-  background:#ffd1dc;
-}
+.layer:nth-child(2){ bottom:16px; background:#ffc0cb; }
+.layer:nth-child(3){ bottom:32px; background:#ffd1dc; }
 
 .candle{
   position:absolute;
@@ -111,18 +75,9 @@ body{
   background:orange;
   border-radius:50%;
   animation:flicker .25s infinite alternate;
-body {
-    
-    background-color:black;  
-    } 
-
-.NEXT
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:20px;
 }
 
+/* ===== BUTTON NEXT ===== */
 .NEXT{
   padding:12px 28px;
   font-size:16px;
@@ -133,21 +88,16 @@ body {
   color:#111;
   font-weight:bold;
   transition:.25s;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
+  position:fixed;
+  bottom:20px;
+  right:20px;
 }
 
-button:hover{
+.NEXT:hover{
   transform:translateY(-3px) scale(1.05);
   box-shadow:0 10px 20px rgba(255,158,243,.4);
 }
 
-button:active{
+.NEXT:active{
   transform:scale(.95);
-}
-
-/* CONFETTI CONTROL */
-.hidden{
-  display:none;
 }
