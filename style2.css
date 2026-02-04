@@ -188,14 +188,14 @@ button:active{
   transform:scale(.95);
 }
 
-.PREVORIUS{
+.BACK{
   display:flex;
   flex-direction:column;
   align-items:center;
   gap:20px;
 }
 
-.PREVORIUS{
+.BACK{
   padding:12px 28px;
   font-size:16px;
   border:none;
