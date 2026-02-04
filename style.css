@@ -20,17 +20,6 @@ body{
 }
   
 
-body{
-    margin:0;
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:#0f0f0f;
-    overflow:hidden;
-    font-family:Arial, sans-serif;
-    color:white;
-  }
 
   /* ===== CONFETTI ===== */
   .confetti{
